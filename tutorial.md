@@ -1,8 +1,15 @@
 ---
-title: About
+title: Tutorial
 ---
 
 # Tutorial
+
+<video controls>
+	<source src="/assets/videos/tutorial.webm" type="video/webm">
+	<source src="/assets/videos/tutorial.mp4" type="video/mp4">
+</video>
+
+[Listen to the track used in the Video on Spotify](https://open.spotify.com/album/2KTdLUOOs5ZrpAN6eoFtIf?si=K6THIiP2SQGm2TN2nOTUeA)
 
 This is a detailed step by step tutorial guiding you trough the download, installation and configuration of required software and the actual bot script.
 
