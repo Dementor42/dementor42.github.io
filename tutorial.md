@@ -17,26 +17,44 @@ To eventually run the bot script you need to have a software called botfather. *
 
 ### TL;DR / Table of contents
 
-1. [Download the bot script](#bot-script-download)
-2. [Configure the bot script](#bot-configuration)
-3. [Run the bot using botfather](#run-the-bot)
-4. [Download botfather](#download-botfather)
-5. [Install botfather](#install-botfather)
-7. [Configure Adobe Flash](#flashplayer-configuration)
+1. [Install Botfather](#install-botfather)
+2. [Download the botscript](#download-the-botscript)
+3. [Configure the botscript](#configure-the-botscript)
+4. [Run the botscript](#run-the-botscript)
+5. [Get support](#get-support)
 
-## Bot script download
+## Install Botfather
 
-Our DarkOrbit bot script is hosted on GitHub. GitHub is like Dropbox but for code. Additionaly it provides tools such as issue tracking.
+First you need to [download botfather]({{ site.botfather_link }}) from the official website. Botfather is availabe for **Microsoft Windows** and any modern **Linux** distribution.
 
-You can [download our bot]({{ site.github_link }}) script from GitHub. Just click the **green download button** on their site and then **Download ZIP**. (If you know what git is you can clone the repo likewise).
+### Windows installation
 
-![Image of the GitHub download button](/assets/images/github_download.png)
+1. Download the [botfather installer]({{ site.botfather_link }})
+2. Run the the installer (no admin rights required)
+3. Click trough the wizard. Done.
 
-## Bot configuration
+### Linux installation
 
-Next we want to configure the script file. To do so you first have to extract it using a software like [7zip](https://www.7-zip.org/), [winrar](https://www.rarlab.com/) or your systems default archive extraction tool.
+1. Follow the [Flatpak quick setup guide](https://flatpak.org/setup/)
+2. Install the [Botfather Flatpak](https://flathub.org/apps/details/io.botfather.Botfather) from Flathub
 
-Next use a code editor like [Notepad++](https://notepad-plus-plus.org/) or [Visual Studio Code](https://code.visualstudio.com/) to edit the configuration section of the script file. There are lines which look roughly like this:
+## Download the botscript
+
+Botfather has an integreded script manager, from wish you can install and update botscripts listed on their website.
+
+1. Open botfather (from the application menu or desktop shortcut)
+2. Click the **Start** button and switch to the **Install** tab
+3. Select **DarkOrbit Pixel Bot** and install it
+
+## Configure the botscript
+
+Next we want to edit the script files configuration section. One day this will be possible from the botfather GUI, according to their blog. Until then we have to edit the script manuelly.
+
+1. In botfather go back to the **Manage** tab and select the **DarkOrbit Pixel Bot** script
+2. Click **Inspect**. This will open the script folder in your file manager.
+1. Edit the script using a code editor like [Notepad++](https://notepad-plus-plus.org/) or [Visual Studio Code](https://code.visualstudio.com/).
+
+The configuration is located at the top of the script and looks roughly like this:
 
 ```javascript
 var CONFIG_USE_PET = false;
@@ -48,53 +66,22 @@ Some settings decide whether the bot shall do something or not. Such settings ar
 
 Using _numbers_ you can decide how often the bot should do something. Keep an eye open: Sometimes those numbers are seconds, sometimes milliseconds (1 seconds = 1000 milliseconds) or something else.
 
-There are also settings which are configured using _text strings_. Look to the right of those settings to see which strings are allowed.
+There are also settings which are configured using _strings_. Look to the right of those settings to see which strings are allowed.
 
-## Run the bot
+## Run the botscript
 
-The bot script is just a set of instructions for botfather. Thus to run the bot script, botfather is required. If you haven't installed botfather yet, read the next sections and come back to this section later.
+**Important:** Open botfathers integrated browser before running the script. On some systems the browser will crash otherwise, which is a known botfather bug.
 
-Open botfather and **click the start button**. A file chooser dialog will appear. Use it to find and **select the bot script**. The bot script will start immediately. If the start fails for some weird reason, try again. If you broke the script with your configuration, fix it first.
+If you don't use auto login you need to load darkorbit.com and login manuelly. Use Crtl-C and Crtl-V to copy paste your login credetials into the botfather browser. Typing doesn't work.
 
-![Image of the botfather toolbar](/assets/images/botfather_icons.png)
+1. In botfahter click **Start**
+2. Select the **DarkOrbit Pixel Bot** script
+3. Click **run**. Done.
 
-## Download botfather
+## Get support
 
-Botfather is a software that executes bot scripts. Botfather does all the technical stuff, our bot script just contains bot logic. So our DarkOrbit bot script runs and depends on their software.
+Follow these steps if something doesn't work as expected:
 
-Thus you need to [download botfather]({{ site.botfather_link }}) from the official botfather website. Botfather is availabe for **Microsoft Windows** and **Ubuntu Linux**.
-
-## Install botfather
-
-To install botfather just run the downloaded botfather installer. The installation wizard will ask you where you want to install botfather. Remember the location, for some reason they don't create desktop and startmenu shortcuts.
-
-On Linux: you first have to make the installer executable as a program. To do so rightclick the installer, click _Properties_, go to the _Permissions_ tab, there make sure _Allow executing file as program_ is checked.
-
-### Start botfather
-
-Goto botfathers installation folder and run the botfather.exe. Windows might complain that it's software from an unknown source, but that just means to haven't payed Micro$oft yet to get verified.
-
-If software doesn't run you don't have all it's dependencies installed. [Botfathers dependencies]({{ site.botfather_link }}) are listed on it's download page.
-
-On Windows: You need to install the [Visual C++ 2015 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=48145) and have the latest windows updates installed.
-
-On Linux: You have to have all required packages installed. On Ubuntu 18.04 you can do so by executing ``sudo apt install qtdeclarative5-dev qtmultimedia5-dev qtscript5-dev libqt5x11extras5-dev libopencv-*`` in the terminal/console.
-
-## Flashplayer configuration
-
-We all know DarkOrbit requires Flash to be installed. Luckily botfathers browser has Flash support, but you need to install and configure Flash manually.
-
-First [download FP for Opera and Chromium - PPAPI](https://get.adobe.com/flashplayer/otherversions/) from the adobe flashplayer website. On Linux: Choose the ``.tar.gz`` archive version.
-
-![Image of Windows Flash download page](/assets/images/flash_windows_download.png)
-![Image of Linux Flash download page](/assets/images/flash_linux_download.png)
-
-On Windows: Just install the just downloaded Adobe Flash installer.
-
-On Linux: Extract the contents from the just download ``.tar.gz`` file and put them somewhere where you can find them easily.
-
-Now **start botfather** and open the **Settings** dialog. There go to the **Browser** tab.
-
-On Windows: Check _Use system wide flash installation_ in the _Flash on Windows_ section and **restart botfather**.
-
-On Linux: Select the earlier extracted ``libpepflashplayer.so`` and ``manifest.json`` files using the **Browse...** buttons in the _Flash on Linux_ section.
+1. Enable _debug mode_ in the botfather settings
+2. Try to **run the botscript** again
+3. Save/copy the debug log and [ask for help on our Discord]({{ site.discord_link }}) server
