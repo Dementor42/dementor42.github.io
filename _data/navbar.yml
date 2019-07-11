@@ -2,5 +2,7 @@
   link: /
 - name: Tutorial
   link: /tutorial.html
-- name: About
-  link: /about.html
+- name: Looting
+  link: /looting.html
+- name: Hunting
+  link: /hunting.html
